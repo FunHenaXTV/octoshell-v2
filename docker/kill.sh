@@ -1,5 +1,5 @@
 #!/bin/sh
-docker kill $(docker ps -q)
-docker rm $(docker ps -a -q)
-docker rmi $(docker images -q) --force
-docker-compose down --volumes
+podman kill $(docker ps -q)
+podman rm $(docker ps -a -q)
+podman rmi $(docker images -q) --force
+podman -compose down --volumes
